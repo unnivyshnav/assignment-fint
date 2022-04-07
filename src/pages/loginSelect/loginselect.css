@@ -1,0 +1,72 @@
+.loginSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.heading {
+  font-size: 35px;
+  color: purple;
+  font-weight: bold;
+}
+
+.box {
+  text-align: center;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  width: 400px;
+  height: 500px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  background-color: purple;
+}
+
+.select {
+  margin: 10px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+  background-color: purple;
+  opacity: 50%;
+  margin: 10px 30px;
+}
+.select.userSelect {
+  width: 100px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  /* width: 300px; */
+  /* margin-top: 1000px; */
+}
+.head {
+  font-size: 25px;
+  color: purple;
+  margin-top: 10px;
+}
+
+.loginpages {
+  margin-top: 30px;
+}
+
+.signupbtn {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  right: 50px;
+  margin: 5px 0px 20px 0px;
+}
+
+.change {
+  color: rgb(38, 4, 125);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
+import AddProducts from "./pages/addproducts/AddProducts";
+import Home from "./pages/home/Home";
+import SellerHome from "./pages/home/SellerHome";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
+
+import LoginSelect from "./pages/loginSelect/LoginSelect";
+import SignupSelect from "./pages/signupSelect/SignupSelect";
 function App() {
+  const { currentUser } = useContext(AuthContext);
+  // const currentUser = false;
+  const RequireAuth = ({ children }) => {
+    return currentUser ? children : <Navigate to="/login" />;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={currentUser ? <Home /> : <LoginSelect />} />
+          <Route
+            path="/seller"
+            element={currentUser ? <SellerHome /> : <LoginSelect />}
+          />
+
+          <Route path="/signup" element={<SignupSelect />} />
+          <Route
+            path="/login"
+            element={currentUser ? <Home /> : <LoginSelect />}
+          />
+          <Route
+            path="/add"
+            element={currentUser ? <AddProducts /> : <LoginSelect />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

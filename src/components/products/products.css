@@ -1,0 +1,15 @@
+.products {
+  color: rgb(151, 206, 255);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 2%;
+  margin-top: 50px;
+  flex: 12;
+  justify-content: flex-start;
+}
+h2 {
+  color: aliceblue;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
