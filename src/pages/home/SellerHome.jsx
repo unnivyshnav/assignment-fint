@@ -2,7 +2,7 @@ import "./home.css";
 import SellerProducts from "../../components/products/SellerProducts";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { auth, db } from "../../firebase";
+import { db } from "../../firebase";
 import SellerTopBar from "../../components/topbar/SellerTopBar";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";

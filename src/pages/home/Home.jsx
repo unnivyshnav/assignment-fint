@@ -2,7 +2,7 @@ import "./home.css";
 import Products from "../../components/products/Products";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { auth, db } from "../../firebase";
+import {  db } from "../../firebase";
 import TopBar from "../../components/topbar/TopBar";
 
 export default function Home() {

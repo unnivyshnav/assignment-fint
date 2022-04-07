@@ -1,7 +1,7 @@
 import "./addProducts.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 
@@ -36,7 +36,9 @@ const Login = () => {
       });
 
       navitage("/seller");
-    } catch {}
+    } catch {
+      setError(true);
+    }
   };
 
   return (
@@ -75,7 +77,7 @@ const Login = () => {
           />
 
           <button type="submit">Add</button>
-          {error && <span>Wrong email or password!</span>}
+          {error && <span>Something Went Wrong</span>}
         </form>
       </div>
     </>

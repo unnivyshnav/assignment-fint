@@ -3,12 +3,7 @@ import "./App.css";
 import AddProducts from "./pages/addproducts/AddProducts";
 import Home from "./pages/home/Home";
 import SellerHome from "./pages/home/SellerHome";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 
@@ -17,9 +12,9 @@ import SignupSelect from "./pages/signupSelect/SignupSelect";
 function App() {
   const { currentUser } = useContext(AuthContext);
   // const currentUser = false;
-  const RequireAuth = ({ children }) => {
-    return currentUser ? children : <Navigate to="/login" />;
-  };
+  // const RequireAuth = ({ children }) => {
+  //   return currentUser ? children : <Navigate to="/login" />;
+  // };
 
   return (
     <Router>
