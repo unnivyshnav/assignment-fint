@@ -2,7 +2,7 @@ import "./addProducts.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 // import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../../firebase";
+import { db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
